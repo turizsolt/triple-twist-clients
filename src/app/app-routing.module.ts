@@ -6,7 +6,7 @@ import {ButtonGameTeamComponent} from "./button-game-team/button-game-team.compo
 
 const routes: Routes = [
   //{ path: '', redirectTo: '/screen', pathMatch: 'full' },
-  { path: '', component: ButtonGameScreenComponent },
+  { path: '', component: ButtonGameTeamComponent },
   { path: 'screen', component: ButtonGameScreenComponent },
   { path: 'team', component: ButtonGameTeamComponent },
 ];

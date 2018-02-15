@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommunicationService} from "../communication.service";
 
 @Component({
   selector: 'app-button-game-team',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonGameTeamComponent implements OnInit {
 
-  constructor() { }
+  constructor(public communication:CommunicationService) {
+
+  }
 
   ngOnInit() {
   }
