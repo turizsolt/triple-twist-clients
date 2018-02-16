@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, NgModule, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, NgModule, NgZone, OnDestroy, OnInit} from '@angular/core';
 import {CommunicationService} from "./communication.service";
 import {Router} from "@angular/router";
 import {RoleService} from "./role.service";
@@ -15,19 +15,24 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(public communication:CommunicationService,
               public cdr:ChangeDetectorRef,
               public router:Router,
-              public role:RoleService) {
+              public role:RoleService,
+              public ngZone:NgZone) {
 
   }
 
   ngOnInit() {
     this.communication.subscribe("message", (data) => {
       console.log(data);
-      this.router.navigateByUrl('/' + this.role.getRole() + '/' + data.parameters.changeTo );
+      this.ngZone.run(() => this.router.navigateByUrl('/' + this.role.getRole() + '/' + data.parameters.changeTo ));
     });
   }
 
   ngOnDestroy() {
 
+  }
+
+  reset() {
+    this.ngZone.run(() => this.router.navigateByUrl('/' ));
   }
 
 }

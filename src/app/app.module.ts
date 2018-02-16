@@ -13,6 +13,9 @@ import {RoleService} from "./role.service";
 import { WelcomeScreenComponent } from './welcome/welcome-screen/welcome-screen.component';
 import { WelcomeTeamComponent } from './welcome/welcome-team/welcome-team.component';
 import { WelcomeHostComponent } from './welcome/welcome-host/welcome-host.component';
+import { ButtonGameHostComponent } from './button-game/button-game-host/button-game-host.component';
+import { ButtonGameScreenComponent } from './button-game/button-game-screen/button-game-screen.component';
+import { ButtonGameTeamComponent } from './button-game/button-game-team/button-game-team.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { WelcomeHostComponent } from './welcome/welcome-host/welcome-host.compon
     RoleComponent,
     WelcomeScreenComponent,
     WelcomeTeamComponent,
-    WelcomeHostComponent
+    WelcomeHostComponent,
+    ButtonGameHostComponent,
+    ButtonGameScreenComponent,
+    ButtonGameTeamComponent
   ],
   imports: [
     BrowserModule,
