@@ -16,6 +16,12 @@ import { WelcomeHostComponent } from './welcome/welcome-host/welcome-host.compon
 import { ButtonGameHostComponent } from './button-game/button-game-host/button-game-host.component';
 import { ButtonGameScreenComponent } from './button-game/button-game-screen/button-game-screen.component';
 import { ButtonGameTeamComponent } from './button-game/button-game-team/button-game-team.component';
+import { GamePickerHostComponent } from './game-picker/game-picker-host/game-picker-host.component';
+import { GamePickerScreenComponent } from './game-picker/game-picker-screen/game-picker-screen.component';
+import { GamePickerTeamComponent } from './game-picker/game-picker-team/game-picker-team.component';
+import { GamePickedHostComponent } from './game-picked/game-picked-host/game-picked-host.component';
+import { GamePickedScreenComponent } from './game-picked/game-picked-screen/game-picked-screen.component';
+import { GamePickedTeamComponent } from './game-picked/game-picked-team/game-picked-team.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,13 @@ import { ButtonGameTeamComponent } from './button-game/button-game-team/button-g
     WelcomeHostComponent,
     ButtonGameHostComponent,
     ButtonGameScreenComponent,
-    ButtonGameTeamComponent
+    ButtonGameTeamComponent,
+    GamePickerHostComponent,
+    GamePickerScreenComponent,
+    GamePickerTeamComponent,
+    GamePickedHostComponent,
+    GamePickedScreenComponent,
+    GamePickedTeamComponent
   ],
   imports: [
     BrowserModule,

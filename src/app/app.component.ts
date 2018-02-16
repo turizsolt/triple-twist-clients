@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.communication.subscribe("message", (data) => {
+    this.communication.subscribe("state", (data) => {
       console.log(data);
       this.ngZone.run(() => this.router.navigateByUrl('/' + this.role.getRole() + '/' + data.parameters.changeTo ));
     });

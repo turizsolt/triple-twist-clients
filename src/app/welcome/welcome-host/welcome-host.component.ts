@@ -15,12 +15,21 @@ export class WelcomeHostComponent implements OnInit {
   ngOnInit() {
   }
 
-  onNext() {
+  onButtonGame() {
     this.communication.emit("message", {
       type: "state",
       event: "change",
       parameters: {changeTo: "button-game"}
     });
   }
+
+  onPicker() {
+    this.communication.emit("message", {
+      type: "state",
+      event: "change",
+      parameters: {changeTo: "game-picker"}
+    });
+  }
+
 
 }
