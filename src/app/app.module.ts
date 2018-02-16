@@ -10,11 +10,17 @@ import {CommunicationService} from "./communication.service";
 import {WebStorageModule, LocalStorageService} from "angular-localstorage4";
 import { RoleComponent } from './role/role.component';
 import {RoleService} from "./role.service";
+import { WelcomeScreenComponent } from './welcome/welcome-screen/welcome-screen.component';
+import { WelcomeTeamComponent } from './welcome/welcome-team/welcome-team.component';
+import { WelcomeHostComponent } from './welcome/welcome-host/welcome-host.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoleComponent
+    RoleComponent,
+    WelcomeScreenComponent,
+    WelcomeTeamComponent,
+    WelcomeHostComponent
   ],
   imports: [
     BrowserModule,
