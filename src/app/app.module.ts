@@ -9,21 +9,27 @@ import { AppRoutingModule } from './/app-routing.module';
 import {SocketIoService} from "./socket-io.service";
 import {COMMUNICATION_SOCKET} from "./communication-socket";
 import {CommunicationService} from "./communication.service";
-
+import {WebStorageModule, LocalStorageService} from "angular-localstorage4";
+import { RoleComponent } from './role/role.component';
+import {RoleService} from "./role.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonGameTeamComponent,
-    ButtonGameScreenComponent
+    ButtonGameScreenComponent,
+    RoleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    WebStorageModule
   ],
   providers: [
     CommunicationService,
-    { provide: COMMUNICATION_SOCKET, useValue: new SocketIoService() }
+    { provide: COMMUNICATION_SOCKET, useValue: new SocketIoService() },
+    LocalStorageService,
+    RoleService
   ],
   bootstrap: [AppComponent]
 })

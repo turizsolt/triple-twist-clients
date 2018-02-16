@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {ButtonGameScreenComponent} from "./button-game-screen/button-game-screen.component";
 import {ButtonGameTeamComponent} from "./button-game-team/button-game-team.component";
+import {RoleComponent} from "./role/role.component";
 
 const routes: Routes = [
   //{ path: '', redirectTo: '/screen', pathMatch: 'full' },
-  { path: '', component: ButtonGameTeamComponent },
-  { path: 'screen', component: ButtonGameScreenComponent },
-  { path: 'team', component: ButtonGameTeamComponent },
+  { path: '', component: RoleComponent },
 ];
 
 @NgModule({

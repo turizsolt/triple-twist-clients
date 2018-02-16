@@ -15,7 +15,7 @@ export class CommunicationService {
     this.socket.on(eventType, fn);
   }
 
-  unsubscribe(eventType:string, fn: (data: any) => void):void {
+  unsubscribe(eventType:string):void {
     this.socket.removeListener(eventType);
   }
 
