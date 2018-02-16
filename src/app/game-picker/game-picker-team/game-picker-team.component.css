@@ -1,0 +1,223 @@
+*
+{
+  margin:0;
+  border:0;
+  padding:0;
+}
+
+body, html, #page{
+  width:100%;
+  height:100%;
+}
+
+#page{
+  width:240px;
+  height:320px;
+}
+
+
+#memberstable, #cardstable{
+  width:240px;
+  height:320px;
+  /*border:1px solid blue;*/
+
+  /* added */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.team{
+  display:table-cell;
+}
+
+.header-div {
+  width:240px;
+}
+
+.header-caption, .choosing-countdown {
+  display: table-cell;
+  border: 1px solid white;
+}
+
+.header-caption {
+  width: 178px;
+  background-color: black;
+}
+
+.choosing-countdown {
+  width:58px;
+  background-color: black;
+}
+
+.header{
+  height:24px;
+  color:white;
+  font-family:'Comic Sans MS', sans;
+  text-align:center;
+  vertical-align:middle;
+
+}
+
+.header-countdown{
+  text-align:right;
+  padding-right:12px;
+}
+
+.card{
+  width:58px;
+  height:57px;
+  /*border:1px solid red;*/
+  background-color:black;
+  color:white;
+  font-family:'Comic Sans MS', sans;
+  text-align:center;
+  vertical-align:middle;
+
+  border: 1px solid white;
+}
+
+.card-symbol{
+  font-size:32px;
+  line-height:36px;
+}
+.card-title{
+  font-size:8px;
+  line-height:12px;
+}
+
+.card-ready{
+  width: 240px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Comic Sans MS', sans;
+  font-size: 14px;
+}
+
+.card-type-0{	background-color:#ff7f7f;}
+.card-type-1{	background-color:#b2d210;}
+.card-type-2{	background-color:#45a2c2;}
+.card-type-3{	background-color:#950f8f;}
+.card-type-4{	background-color:#359235;}
+.card-type-5{	background-color:#4545c2;}
+.card-type-6{	background-color:#ffdf1f;}
+.card-type-7{	background-color:#00efdf;}
+.card-type-8{	background-color:#afafaf;}
+.card-type-9{	background-color:#8f3f1f;}
+.card-type-10{	background-color:#ff7f00;}
+.card-type-11{	background-color:#df8f6f;}
+.card-type-12{	background-color:#df7fff;}
+/*dfbfff*/
+
+.card-used{
+  background-color:white;
+  color:#afafaf;
+  opacity:0.2;
+}
+
+.card-locked{
+  background-color:black;
+  color:#afafaf;
+  opacity:1;
+}
+
+.card-nothing{
+  display:none;
+}
+
+
+
+
+.member{
+  width:110px;
+  height:93px;
+  text-align:right;
+  vertical-align:bottom;
+  background-color:#b2d210;
+  /*background-image:url('jatekos.png');*/
+
+  padding-right:8px;
+  padding-bottom:4px;
+  border: 1px solid white;/* added */
+}
+
+.member-count{
+  color:black; /*#82a200;*/
+  font-weight:bold;
+  font-family:'Comic Sans MS', sans;
+  font-size:32px;
+}
+
+.member-locked{
+  opacity:0.4;
+}
+
+.member-used{
+  opacity:0.05;
+}
+
+.member-used .member-count{
+  display:none;
+}
+
+.member-nobody{
+  display:none;
+}
+
+.big-button{
+  width:240px;
+  height:238px;
+  background-color:#b2d210;
+  font-family:'Comic Sans MS', sans;
+  font-size:24px;
+  line-height:20px;
+  color:white;
+  text-align:center;
+  vertical-align:middle;
+}
+
+.big-caption{
+  font-size:200px;
+  color:#728200;
+  line-height:160px;
+}
+
+.big-small{
+  font-size:12px;
+  line-height:20px;
+}
+
+.button-pushed{
+  opacity:0.5;
+}
+
+/* original ------------- */
+
+.ready{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left:-180px;
+  margin-top: -180px;
+  width:360px;
+  height:230px;
+  text-align: center;
+  background-color: lightgreen;
+  background-image: radial-gradient(ellipse farthest-corner at 180px 180px , limegreen 0%, white 50%);
+  color: green;
+  border-radius:180px;
+  padding-top:130px;
+}
+
+.ready-check {
+  font-size: 100px;
+  line-height: 60px;
+}
+
+.ready-text {
+  font-size: 20px;
+  line-height: 20px;
+}
