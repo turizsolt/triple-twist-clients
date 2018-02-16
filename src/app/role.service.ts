@@ -3,6 +3,7 @@ import {LocalStorage} from "angular-localstorage4";
 
 @Injectable()
 export class RoleService {
+  // uncomment these in production
   //@LocalStorage("role")
     role:string = 'screen';
   //@LocalStorage("teamId")
@@ -20,6 +21,6 @@ export class RoleService {
 
   setRole(role:string, teamId?:number) {
     this.role = role;
-    if(teamId) this.teamId = teamId;
+    if(teamId !== undefined) this.teamId = teamId;
   }
 }
