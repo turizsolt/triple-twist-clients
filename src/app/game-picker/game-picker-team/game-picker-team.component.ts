@@ -40,7 +40,7 @@ export class GamePickerTeamComponent implements OnInit, OnDestroy {
     this.members = myData.member;
 
     this.memberChoose = data.parameters.memberChoose;
-    // TODO
+    this.changeDetectorRef.detectChanges();
   };
 
   ngOnDestroy(): void {

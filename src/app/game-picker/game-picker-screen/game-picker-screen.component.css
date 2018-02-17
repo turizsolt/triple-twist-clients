@@ -1,0 +1,33 @@
+.main-countdown-outer {
+  width: 480px;
+  height: 480px;
+
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.main-countdown-figures {
+  text-align:center;
+  position: absolute;
+  margin-top: 128px;
+  width: 100%;
+  font-size: 160px;
+  font-family: "Comic Sans MS", sans;
+}
+
+.main-countdown {
+  width: 480px;
+  height: 480px;
+
+  -webkit-transform: scaleX(-1) rotate(-90deg);
+  transform: scaleX(-1) rotate(-90deg);
+}
+
+.main-countdown-strip {
+  stroke-dasharray: 1320;
+  stroke-dashoffset: 1320;
+}

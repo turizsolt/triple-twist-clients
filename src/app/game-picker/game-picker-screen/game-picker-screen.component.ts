@@ -7,6 +7,7 @@ import {CommunicationService} from "../../communication.service";
   styleUrls: ['./game-picker-screen.component.css']
 })
 export class GamePickerScreenComponent implements OnInit {
+  countdown:string="30";
 
   constructor(
     public communication:CommunicationService,
@@ -14,14 +15,23 @@ export class GamePickerScreenComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.communication.subscribe("game-picker", (data) => {
-      console.log("game-picker-screen", data);
-      this.changeDetectorRef.detectChanges();
-    });
+    this.communication.subscribe("game-picker", this.onMessage);
   }
 
   ngOnDestroy(): void {
     this.communication.unsubscribe("game-picker");
   }
+
+  onMessage = (data) => {
+    switch(data.event) {
+      case "counter":
+        let sec = data.parameters.counter;
+        this.countdown = (sec < 10 ? '0' : '') + sec;
+        break;
+    }
+
+    console.log("game-picker-team", data);
+    this.changeDetectorRef.detectChanges();
+  };
 }
 
