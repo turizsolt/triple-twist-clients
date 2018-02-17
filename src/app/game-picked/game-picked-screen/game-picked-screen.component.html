@@ -6,12 +6,14 @@
       <div class="colsp"></div>
       <div class="col col{{i}} team-picking">
 
-        <div class="team-member">
+        <div *ngIf="memberCount > 0" class="team-member">
           <div
             *ngFor="let member of team.members; let j = index"
-            class="member-profile picking-member-profile ic1 zero{{j}} normal" style="background-image: url('profile/{{member.pic}}');">
+            class="member-profile picking-member-profile ic{{memberCount}} zero{{j}} normal"
+            [style.background-image]="member.pictureFullUrl">
           </div>
         </div>
+        <div *ngIf="memberCount == 0" class="member-profile picking-member-profile ic0 zero0 normal">(Csapat)</div>
 
         <div class="card-holder-picked">
           <div *ngFor="let card of team.cards; let j = index"

@@ -9,7 +9,8 @@ import {RoleService} from "../../role.service";
   styleUrls: ['./game-picked-screen.component.css']
 })
 export class GamePickedScreenComponent implements OnInit {
-  teams:any[];
+  teams:any[] = [];
+  memberCount:number = 0;
 
   constructor(
     public communication:CommunicationService,
@@ -34,7 +35,10 @@ export class GamePickedScreenComponent implements OnInit {
     console.log("onInit", data);
     this.teams = data.parameters.result.map((team) => {
       return {
-        members: team.member,
+        members: team.member.map(m => {
+          m.pictureFullUrl = "url('assets/images/profilePictures/"+m.pic+"')";
+          return m;
+        }),
         cards: team.card
           .filter(c => c.processResult == 0)
           .map((c) => {
@@ -45,6 +49,7 @@ export class GamePickedScreenComponent implements OnInit {
           };
         })
     };});
+    this.memberCount = this.teams[0].members.length;
     console.log("after onInit", this.teams);
   }
 

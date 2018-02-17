@@ -9,8 +9,9 @@
     <div *ngFor="let member of members; let i = index"
          class="member"
          [ngClass]="{'member-used':member.left == 0,'member-locked':member.locked}"
-         (click)="onMember(i);">
-      <span class="member-count">{{member.left}}</span>
+         (click)="onMember(i);"
+         [style.background-image]="member.pictureFullUrl">
+      <span class="member-count" style="color:{{member.color}};">{{member.left}}</span>
     </div>
   </div>
 </div>

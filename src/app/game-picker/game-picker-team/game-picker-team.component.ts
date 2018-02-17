@@ -37,7 +37,10 @@ export class GamePickerTeamComponent implements OnInit, OnDestroy {
         title: CardInfoService.getTitle(c.type)
     }; });
     console.log("cards, ",this.cards);
-    this.members = myData.member;
+    this.members = myData.member.map(m => {
+      m.pictureFullUrl = "url('assets/images/profilePictures/"+m.pic+"')";
+      return m;
+    });
 
     this.memberChoose = data.parameters.memberChoose;
     this.changeDetectorRef.detectChanges();

@@ -138,6 +138,8 @@ body, html, #page{
   vertical-align:bottom;
   background-color:#b2d210;
   /*background-image:url('jatekos.png');*/
+  background-position: center; /* added */
+  background-size: cover; /* added */
 
   padding-right:8px;
   padding-bottom:4px;
