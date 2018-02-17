@@ -1,3 +1,30 @@
-<p>
-  game-picked-screen works!
-</p>
+<div id="top">
+  <div class="row" id="top-inner">
+    <div class="colside"></div>
+
+    <ng-container *ngFor="let team of teams; let i = index">
+      <div class="colsp"></div>
+      <div class="col col{{i}} team-picking">
+
+        <div class="team-member">
+          <div
+            *ngFor="let member of team.members; let j = index"
+            class="member-profile picking-member-profile ic1 zero{{j}} normal" style="background-image: url('profile/{{member.pic}}');">
+          </div>
+        </div>
+
+        <div class="card-holder-picked">
+          <div *ngFor="let card of team.cards; let j = index"
+               class="card picking-card card-type-{{card.type}} zero{{i}} normal">
+            <span class="card-symbol">{{card.symbol}}</span>
+            <br>
+            <span class="card-title">{{card.title}}</span>
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+  </div>
+  <div class="colsp"></div>
+  <div class="colside"></div>
+</div>

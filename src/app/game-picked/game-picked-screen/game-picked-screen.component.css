@@ -1,0 +1,407 @@
+/* generated with less, achtung */
+.col0 {
+  background-color: #A0A6EB;
+}
+.col1 {
+  background-color: #A0EBAE;
+}
+.col2 {
+  background-color: #EBA0DD;
+}
+.col3 {
+  background-color: #cca91d;
+}
+.col4 {
+  background-color: #ff7575;
+}
+.col5 {
+  background-color: #d8d2c8;
+}
+.col0.buzzer,
+.col0.buzzMe {
+  background-color: #4351F0;
+}
+.col1.buzzer,
+.col1.buzzMe {
+  background-color: #1AC946;
+}
+.col2.buzzer,
+.col2.buzzMe {
+  background-color: #C91A9D;
+}
+.col3.buzzer,
+.col3.buzzMe {
+  background-color: #edcb32;
+}
+.col4.buzzer,
+.col4.buzzMe {
+  background-color: #ff3030;
+}
+.col5.buzzer,
+.col5.buzzMe {
+  background-color: #8e8a83;
+}
+.col0.buzzBanned {
+  color: #4351F0;
+  background-color: white;
+}
+.col1.buzzBanned {
+  color: #1AC946;
+  background-color: white;
+}
+.col2.buzzBanned {
+  color: #C91A9D;
+  background-color: white;
+}
+.col3.buzzBanned {
+  color: #edcb32;
+  background-color: white;
+}
+.col4.buzzBanned {
+  color: #ff3030;
+  background-color: white;
+}
+.col5.buzzBanned {
+  color: #8e8a83;
+  background-color: white;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html,
+body,
+div,
+img {
+  margin: 0;
+  padding: 0;
+}
+#wrapper,
+#bottom {
+  width: 100%;
+}
+.col,
+.colsp,
+.colside {
+  display: table-cell;
+}
+#bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 166px;
+}
+#bottom.small {
+  height: 112px;
+}
+#bottom {
+  transition: height 0.2s;
+}
+#bottom-inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1310px;
+}
+#top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+  height: 274px;
+}
+#top-inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1310px;
+}
+.col {
+  width: 226px;
+  height: 126px;
+  padding: 10px;
+}
+.col.small {
+  height: 72px;
+}
+.team-picking.col {
+  height: 234px;
+}
+.rowsp {
+  height: 20px;
+}
+.colsp {
+  width: 20px;
+}
+/* member */
+.team-member {
+  height: 72px;
+}
+.member-profile {
+  width: 60px;
+  height: 60px;
+  border: 1px white solid;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.member-profile.ic0 {
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 15px;
+  height: 45px;
+  width: 114px;
+  color: white;
+}
+.member-profile.ic1 {
+  width: 60px;
+}
+.member-profile.ic2 {
+  width: 56.5px;
+}
+.member-profile.ic3 {
+  width: 37.33px;
+}
+.member-profile {
+  margin-left: -1px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 62px 62px;
+  border: 1px solid white;
+  display: inline-block;
+}
+.member-profile.zero0 {
+  margin-left: 10px;
+}
+.team-picking .team-member {
+  height: 150px;
+}
+.member-profile.picking-member-profile.ic0 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 45px;
+  padding-top: 32px;
+  height: 96px;
+  width: 204px;
+  color: white;
+}
+.member-profile.picking-member-profile.ic1 {
+  width: 128px;
+}
+.member-profile.picking-member-profile.ic2 {
+  width: 101.5px;
+}
+.member-profile.picking-member-profile.ic3 {
+  width: 67.33px;
+}
+.member-profile.picking-member-profile {
+  width: 128px;
+  height: 128px;
+  background-size: 130px 130px;
+}
+/* card */
+.card {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-family: 'Comic Sans MS', sans;
+  font-size: 4.8px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  border: 1px solid white;
+}
+.card-symbol {
+  font-size: 14.4px;
+  line-height: 19.2px;
+}
+.card-title {
+  font-size: 3.6px;
+  line-height: 3.6px;
+}
+.team-picking .card {
+  width: 60px;
+  height: 60px;
+  font-size: 9.6px;
+}
+.team-picking .card-symbol {
+  font-size: 28.8px;
+  line-height: 38.4px;
+}
+.team-picking .card-title {
+  font-size: 7.2px;
+  line-height: 7.2px;
+}
+.anytime-card-overlay .card {
+  width: 240px;
+  height: 240px;
+  font-size: 38.4px;
+}
+.anytime-card-overlay .card-symbol {
+  font-size: 115.2px;
+  line-height: 153.6px;
+}
+.anytime-card-overlay .card-title {
+  font-size: 28.8px;
+  line-height: 28.8px;
+}
+/* score */
+.score {
+  float: right;
+  width: 80px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+/* fading */
+.zero0 {
+  transition-delay: all 0.2s;
+  transition: all 0.2s;
+  transform: scale(0);
+}
+.zero1 {
+  transition-delay: all 0.2s;
+  transition: all 0.6s;
+  transform: scale(0);
+}
+.zero2 {
+  transition-delay: all 0.2s;
+  transition: all 0.8s;
+  transform: scale(0);
+}
+.normal {
+  transform: scale(1);
+}
+#screen-header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 40px;
+  padding-top: 20px;
+  font-size: 16px;
+  font-family: "Comic Sans MS", sans;
+}
+#screen-header-clock {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  padding-right: 20px;
+  text-align: right;
+  display: inline-block;
+}
+#screen-header-game-title {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  padding-left: 20px;
+  text-align: left;
+  display: inline-block;
+}
+#r1 {
+  font-family: 'Comic Sans MS', sans;
+  font-size: 240px;
+  text-align: center;
+  margin-top: 100px;
+}
+.card-type-0 {
+  background-color: #ff7f7f;
+}
+.card-type-1 {
+  background-color: #b2d210;
+}
+.card-type-2 {
+  background-color: #45a2c2;
+}
+.card-type-3 {
+  background-color: #950f8f;
+}
+.card-type-4 {
+  background-color: #359235;
+}
+.card-type-5 {
+  background-color: #4545c2;
+}
+.card-type-6 {
+  background-color: #ffdf1f;
+}
+.card-type-7 {
+  background-color: #00efdf;
+}
+.card-type-8 {
+  background-color: #afafaf;
+}
+.card-type-9 {
+  background-color: #8f3f1f;
+}
+.card-type-10 {
+  background-color: #ff7f00;
+}
+.card-type-11 {
+  background-color: #df8f6f;
+}
+.card-type-12 {
+  background-color: #df7fff;
+}
+#middle {
+  position: absolute;
+  top: 226px;
+  width: 100%;
+  text-align: center;
+}
+.countdown-box,
+.time-box {
+  font-size: 240px;
+}
+.team-game-data-middle {
+  text-align: center;
+}
+.smaller-row {
+  font-size: 32px;
+}
+.bigger-row {
+  font-size: 72px;
+}
+/* TEAM-N */
+.nobuzz,
+.col0.nobuzz,
+.col1.nobuzz,
+.col2.nobuzz,
+.col3.nobuzz {
+  /* TEAM-N */
+  background-color: transparent;
+  opacity: 0.1;
+}
+.banned {
+  background-color: transparent;
+  opacity: 0.1;
+}
+.hidden {
+  display: none;
+}
+.team-game-data,
+.team-state {
+  transition: background-color 0.2s;
+  transition: opacity 0.2s;
+}
+.team-state {
+  overflow: hidden;
+}
+.anytime-card-overlay {
+  display: none;
+  text-align: center;
+  z-index: 100;
+  border: 1px solid black;
+  border-radius: 10%;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  padding-top: 40px;
+}
