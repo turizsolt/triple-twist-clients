@@ -1,34 +1,44 @@
-<div class="team" id="members" *ngIf="false" >
+<div class="team" id="members" *ngIf="memberChoose > 0" >
   <div class="header-div">
     <div class="header header-caption" id="Td1">Kék csapat</div>
-    <div class="header header-countdown choosing-countdown">:00</div>
+    <div class="header header-countdown choosing-countdown">:{{countdown}}</div>
   </div>
 
   <div id="memberstable">
 
-  <div *ngFor="let member of members; let i = index"
+    <div *ngFor="let member of members; let i = index"
          class="member"
+         [ngClass]="{'member-used':member.left == 0,'member-locked':member.locked}"
          (click)="onMember(i);">
       <span class="member-count">{{member.left}}</span>
     </div>
   </div>
 </div>
 
-<div class="team" id="cards">
+<div class="team" id="cards" *ngIf="(memberChoose == 0 && !weAreReady)">
   <div class="header-div">
-      <div class="header header-caption" id="header-caption">Kék csapat</div>
-      <div class="header choosing-countdown">:00</div>
-    </div>
+    <div class="header header-caption" id="header-caption">Kék csapat</div>
+    <div class="header choosing-countdown">:{{countdown}}</div>
+  </div>
 
   <div id="cardstable">
-      <div *ngFor="let card of cards; let i = index"
-        [class.card-used]="card.used == 2"
-        [class.card-locked]="card.used == 1"
-        class="card card-type-{{card.type}}"
-        (click)="onCard(i)">
-        <span class="card-symbol">{{card.symbol}}</span>
-        <br />
-        <span class="card-title">{{card.title}}</span>
-      </div>
+    <div *ngFor="let card of cards; let i = index"
+         [ngClass]="{'card-locked':card.locked, 'card-used':card.used}"
+         class="card card-type-{{card.type}}"
+         (click)="onCard(i)">
+      <span class="card-symbol">{{card.symbol}}</span>
+      <br />
+      <span class="card-title">{{card.title}}</span>
+    </div>
+  </div>
+
+  <div id="ready-button" class="card-ready" (click)="onReady()">Készen vagyunk!</div>
+
+</div>
+
+<div class="team" id="ready" *ngIf="weAreReady">
+  <div class="ready">
+    <span class="ready-check">✔</span><br />
+    <span class="ready-text">Készen vagytok.</span>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {LocalStorage} from "angular-localstorage4";
 import {Title} from "@angular/platform-browser";
 
@@ -9,9 +9,13 @@ export class RoleService {
     role:string = 'screen';
   //@LocalStorage("teamId")
     teamId:number = -1;
+    roleUpdated: EventEmitter<void>;
 
-  constructor(private titleService: Title) {
+  constructor(
+    private titleService: Title
+  ) {
     this.titleService.setTitle(this.getTitle());
+    this.roleUpdated = new EventEmitter();
   }
 
   getRole() {
@@ -26,6 +30,7 @@ export class RoleService {
     this.role = role;
     if(teamId !== undefined) this.teamId = teamId;
     this.titleService.setTitle(this.getTitle());
+    this.roleUpdated.emit();
   }
 
   private getTitle() {
@@ -34,5 +39,16 @@ export class RoleService {
           ? (" #" + this.teamId)
           : ("")
       ) + " - TripleTwistClient";
+  }
+
+  getRoleAsPeerType() {
+    switch(this.role) {
+      case "server": return 0;
+      case "host": return 1;
+      case "team": return 2;
+      case "screen": return 3;
+      case "all": return 4;
+      default: return -1;
+    }
   }
 }
