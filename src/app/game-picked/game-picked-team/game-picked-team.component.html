@@ -1,3 +1,14 @@
-<p>
-  game-picked-team works!
-</p>
+<div id="cards-feedback-outer">
+  <table id="cards-feedback">
+    <tr *ngFor="let card of cards">
+      <td class="card-{{card.feedback}} card card-type-{{card.type}}">
+        <span class="card-symbol">{{card.symbol}}</span>
+        <br>
+        <span class="card-title">{{card.title}}</span>
+      </td>
+      <td class="card-{{card.feedback}} card-reason">
+        {{card.reason}}
+      </td>
+    </tr>
+  </table>
+</div>

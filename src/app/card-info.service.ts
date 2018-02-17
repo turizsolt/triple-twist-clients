@@ -16,6 +16,18 @@ declare const enum CardType{
   Boooring = 12
 }
 
+declare const enum CardProcessResult{
+  NotDetermined = -1,
+  Accepted = 0,
+  FreezerHasBeenPlayed = 11,
+  ThereWereAFasterFreezer = 12,
+  OnlyOneJokerAndHalfPoint = 21,
+  OnlyOneOfTheSameType = 31,
+  OnlyOneAtAllTeams = 41,
+  OnlyThreePerTeam = 51,
+  UseOnlyInGame = 61
+}
+
 export class CardInfoService {
 
   public static getSymbol(_type:CardType):string{
@@ -52,5 +64,20 @@ export class CardInfoService {
       case CardType.IamRight: return 'Igazam van!';
       case CardType.Boooring: return 'Uuuuncsi!';
     }
+  }
+
+  static getReason(processResult: number): string {
+    switch(processResult){
+      case CardProcessResult.NotDetermined: return '[HIBA!]';
+      case CardProcessResult.Accepted: return 'Sikeresen kijátszva.';
+      case CardProcessResult.FreezerHasBeenPlayed: return 'Fagyasztó fagyasztotta.';
+      case CardProcessResult.ThereWereAFasterFreezer: return 'Volt gyorsabb Fagyasztó.';
+      case CardProcessResult.OnlyOneJokerAndHalfPoint: return 'Már van Jokeretek vagy Felezőtök.';
+      case CardProcessResult.OnlyOneOfTheSameType: return 'Ilyen kártyát már játszottatok ki fentebb.';
+      case CardProcessResult.OnlyOneAtAllTeams: return 'Másik csapat előbb játszotta ezt ki.';
+      case CardProcessResult.OnlyThreePerTeam: return 'Legfeljebb 3 kártyát játszhattok ki.';
+      case CardProcessResult.UseOnlyInGame: return 'Csak játék közben játszható ki.';
+    }
+
   }
 }
