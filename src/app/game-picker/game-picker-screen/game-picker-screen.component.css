@@ -29,5 +29,18 @@
 
 .main-countdown-strip {
   stroke-dasharray: 1320;
-  stroke-dashoffset: 1320;
+
+  animation-name: clock;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+}
+
+.main-countdown-strip {
+  stroke-dashoffset: 0;
+}
+
+@keyframes clock {
+  0% {stroke-dashoffset: 0;}
+  75% {stroke-dashoffset: 1320;}
+  100% {stroke-dashoffset: 1320;}
 }
